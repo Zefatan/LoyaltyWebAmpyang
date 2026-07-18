@@ -1,0 +1,29 @@
+{
+  "name": "Kedai Ampyang — Kartu Member",
+  "short_name": "Ampyang",
+  "description": "Kartu member digital & promo Kedai Ampyang",
+  "lang": "id",
+  "start_url": "kartu.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fdf6ea",
+  "theme_color": "#3e2620",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

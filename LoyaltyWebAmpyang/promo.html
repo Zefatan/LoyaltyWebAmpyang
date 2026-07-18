@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo — Kedai Ampyang</title>
+  <meta name="theme-color" content="#3e2620">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-dalam">
+      <a class="logo" href="index.html">Kedai <span>Ampyang</span></a>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="kartu.html">Kartu</a>
+        <a href="promo.html" class="aktif">Promo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:0.75rem">
+      <h1>Promo Kedai Ampyang</h1>
+      <p>Cek terus halaman ini biar nggak ketinggalan penawaran spesial buat member.</p>
+    </section>
+
+    <section id="promo-semua"></section>
+
+    <section class="panel">
+      <h2>Mau Dikabari Duluan?</h2>
+      <p>Gabung daftar siaran WhatsApp — promo terbaru langsung kami kirim ke HP kamu.</p>
+      <a class="btn btn-wa btn-blok" data-link-wa href="#" target="_blank" rel="noopener">Gabung Info Promo via WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong data-nama-kedai>Kedai Ampyang</strong> · © <span data-tahun></span></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script>renderPromo("promo-semua");</script>
+</body>
+</html>

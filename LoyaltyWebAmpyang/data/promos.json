@@ -1,0 +1,29 @@
+{
+  "diperbarui": "2026-07-18",
+  "promos": [
+    {
+      "id": "p1",
+      "judul": "Promo Pembukaan Member: Stempel Ganda!",
+      "deskripsi": "Daftar member bulan ini dan dapatkan 2 stempel untuk setiap pembelian minuman. Kartu penuh lebih cepat, gratisnya lebih dekat!",
+      "label": "Member Baru",
+      "mulai": "2026-07-01",
+      "selesai": "2026-08-31"
+    },
+    {
+      "id": "p2",
+      "judul": "Senin Hemat — Kopi Susu Ampyang 10rb",
+      "deskripsi": "Setiap hari Senin, Kopi Susu Ampyang cuma Rp10.000 khusus member yang menunjukkan kartu digitalnya di kasir.",
+      "label": "Member",
+      "mulai": "2026-07-01",
+      "selesai": "2026-09-30"
+    },
+    {
+      "id": "p3",
+      "judul": "Beli 2 Gorengan Gratis Teh Tawar Hangat",
+      "deskripsi": "Berlaku untuk semua pelanggan setiap sore jam 15.00–18.00, selama persediaan masih ada.",
+      "label": "Semua",
+      "mulai": "2026-07-10",
+      "selesai": "2026-07-31"
+    }
+  ]
+}

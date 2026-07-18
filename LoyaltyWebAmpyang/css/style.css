@@ -1,0 +1,394 @@
+/* ============================================================
+   Kedai Ampyang — tema hangat kopitiam
+   Mobile-first: mayoritas pelanggan membuka dari HP.
+   ============================================================ */
+
+:root {
+  --coklat-tua: #3e2620;
+  --coklat: #5c3a2e;
+  --amber: #d98e2b;
+  --amber-tua: #b06f14;
+  --krem: #fdf6ea;
+  --krem-kartu: #fffdf8;
+  --hijau: #4a7c59;
+  --teks: #3a2c24;
+  --teks-samar: #8a7466;
+  --radius: 14px;
+  --bayangan: 0 2px 12px rgba(62, 38, 32, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: var(--krem);
+  color: var(--teks);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--coklat-tua);
+  line-height: 1.25;
+}
+
+a { color: var(--amber-tua); }
+
+/* ---------- Header & navigasi ---------- */
+header {
+  background: var(--coklat-tua);
+  color: var(--krem);
+  padding: 0.9rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-dalam {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--krem);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span { color: var(--amber); }
+
+nav { display: flex; gap: 0.25rem; }
+
+nav a {
+  color: var(--krem);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+
+nav a.aktif,
+nav a:hover { background: rgba(217, 142, 43, 0.25); }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 2.25rem 1rem 1.75rem;
+}
+
+.hero h1 { font-size: 1.9rem; margin-bottom: 0.5rem; }
+.hero p { color: var(--teks-samar); max-width: 34ch; margin: 0 auto 1.25rem; }
+
+/* ---------- Tombol ---------- */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-utama { background: var(--amber); color: var(--coklat-tua); }
+.btn-utama:hover { opacity: 0.9; }
+
+.btn-sekunder {
+  background: transparent;
+  color: var(--coklat);
+  border: 2px solid var(--coklat);
+}
+
+.btn-wa { background: #25d366; color: #fff; }
+
+.btn-blok { display: block; width: 100%; margin-top: 0.6rem; }
+
+/* ---------- Kartu bagian ---------- */
+.panel {
+  background: var(--krem-kartu);
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  padding: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.panel h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+/* ---------- Langkah cara kerja ---------- */
+.langkah {
+  display: grid;
+  gap: 0.9rem;
+  counter-reset: langkah;
+}
+
+.langkah li {
+  list-style: none;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.langkah li::before {
+  counter-increment: langkah;
+  content: counter(langkah);
+  flex: 0 0 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--coklat-tua);
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- Kartu member ---------- */
+.kartu-member {
+  background: linear-gradient(135deg, var(--coklat-tua), var(--coklat));
+  color: var(--krem);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--bayangan);
+  margin-bottom: 1.25rem;
+}
+
+.kartu-member .kedai {
+  font-family: Georgia, serif;
+  color: var(--amber);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kartu-member h2 {
+  color: var(--krem);
+  font-size: 1.5rem;
+  margin: 0.2rem 0 0.1rem;
+}
+
+.kartu-member .meta {
+  font-size: 0.85rem;
+  color: rgba(253, 246, 234, 0.75);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* ---------- Grid stempel ---------- */
+.grid-stempel {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
+  margin: 1.1rem 0 0.75rem;
+}
+
+.stempel {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px dashed rgba(253, 246, 234, 0.45);
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  color: rgba(253, 246, 234, 0.55);
+}
+
+.stempel.terisi {
+  background: var(--amber);
+  border-style: solid;
+  border-color: var(--amber);
+  font-size: 1.4rem;
+  animation: cap 0.35s ease;
+}
+
+@keyframes cap {
+  0% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.teks-progres {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(253, 246, 234, 0.9);
+}
+
+/* ---------- Banner hadiah ---------- */
+.banner-hadiah {
+  background: var(--hijau);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--bayangan);
+}
+
+/* ---------- Promo ---------- */
+.promo-card {
+  background: var(--krem-kartu);
+  border-radius: var(--radius);
+  border-left: 5px solid var(--amber);
+  box-shadow: var(--bayangan);
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.promo-card h3 { margin: 0.35rem 0 0.3rem; }
+
+.promo-label {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--coklat-tua);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+.promo-periode {
+  font-size: 0.85rem;
+  color: var(--teks-samar);
+  margin-top: 0.4rem;
+}
+
+.kosong { color: var(--teks-samar); text-align: center; padding: 1rem 0; }
+
+/* ---------- Formulir ---------- */
+label { font-weight: 600; font-size: 0.92rem; display: block; margin-bottom: 0.3rem; }
+
+input, textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font-size: 1rem;
+  border: 1.5px solid #d8c9b8;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 0.9rem;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--amber);
+  border-color: var(--amber);
+}
+
+.catatan { font-size: 0.83rem; color: var(--teks-samar); margin-top: -0.5rem; margin-bottom: 0.9rem; }
+
+/* ---------- Riwayat ---------- */
+.daftar-riwayat { list-style: none; }
+
+.daftar-riwayat li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed #e4d7c5;
+  font-size: 0.92rem;
+}
+
+.daftar-riwayat time { color: var(--teks-samar); white-space: nowrap; font-size: 0.85rem; }
+
+/* ---------- Modal PIN ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(42, 26, 20, 0.6);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--krem-kartu);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 22rem;
+  text-align: center;
+}
+
+.modal-info { font-size: 0.9rem; color: var(--teks-samar); margin: 0.5rem 0 1rem; }
+
+.pin-input {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+.pin-salah { color: #b3261e; font-size: 0.88rem; margin-bottom: 0.5rem; }
+
+.modal-tombol { display: flex; gap: 0.6rem; justify-content: center; margin-top: 0.5rem; }
+.modal-tombol .btn { flex: 1; }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 150%);
+  background: var(--coklat-tua);
+  color: var(--krem);
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  box-shadow: var(--bayangan);
+  font-size: 0.92rem;
+  max-width: min(90vw, 26rem);
+  text-align: center;
+  transition: transform 0.35s ease;
+  z-index: 60;
+}
+
+.toast.muncul { transform: translate(-50%, 0); }
+
+/* ---------- Kode/JSON ---------- */
+pre.kode {
+  background: #2c211b;
+  color: #f4e8d6;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--coklat-tua);
+  color: rgba(253, 246, 234, 0.8);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1.25rem 1rem;
+}
+
+footer a { color: var(--amber); }

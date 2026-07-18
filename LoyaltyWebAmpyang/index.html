@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Ampyang — Member & Promo</title>
+  <meta name="description" content="Kartu member digital Kedai Ampyang: kumpulkan stempel tiap kunjungan, tukar dengan hadiah, dan pantau promo terbaru.">
+  <meta name="theme-color" content="#3e2620">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-dalam">
+      <a class="logo" href="index.html">Kedai <span>Ampyang</span></a>
+      <nav>
+        <a href="index.html" class="aktif">Beranda</a>
+        <a href="kartu.html">Kartu</a>
+        <a href="promo.html">Promo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Ngopi Terus, Gratisnya Nyusul</h1>
+      <p>Kumpulkan stempel digital setiap mampir ke <span data-nama-kedai>Kedai Ampyang</span> — kartu penuh, minuman gratis untukmu.</p>
+      <a class="btn btn-utama" href="kartu.html">Buka Kartu Member Saya</a>
+    </section>
+
+    <section class="panel">
+      <h2>Caranya Gampang</h2>
+      <ol class="langkah">
+        <li>Daftar member langsung di HP kamu — gratis, tanpa install aplikasi, tanpa ribet.</li>
+        <li>Setiap jajan di kedai, tunjukkan kartu digitalmu ke kasir untuk dapat stempel.</li>
+        <li>Kumpulkan 10 stempel dan tukarkan dengan minuman gratis pilihanmu.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Promo yang Sedang Berjalan</h2>
+      <div id="promo-beranda"></div>
+      <a class="btn btn-sekunder btn-blok" href="promo.html">Lihat Semua Promo</a>
+    </section>
+
+    <section class="panel">
+      <h2>Jangan Ketinggalan Promo</h2>
+      <p>Gabung daftar siaran WhatsApp kami — info promo dan menu baru langsung masuk ke HP kamu.</p>
+      <a class="btn btn-wa btn-blok" data-link-wa href="#" target="_blank" rel="noopener">Gabung Info Promo via WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong data-nama-kedai>Kedai Ampyang</strong> · Jl. Contoh No. 1</p>
+    <p>Setiap hari, 07.00 – 22.00 · © <span data-tahun></span></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script>renderPromo("promo-beranda", 2);</script>
+</body>
+</html>

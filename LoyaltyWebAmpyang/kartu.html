@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Member — Kedai Ampyang</title>
+  <meta name="theme-color" content="#3e2620">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-dalam">
+      <a class="logo" href="index.html">Kedai <span>Ampyang</span></a>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="kartu.html" class="aktif">Kartu</a>
+        <a href="promo.html">Promo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Pendaftaran (tampil jika belum jadi member) -->
+    <section id="bagian-daftar" class="panel" hidden>
+      <h2>Daftar Member — Gratis!</h2>
+      <p style="margin-bottom:1rem">Isi nama kamu, dan kartu stempel digitalmu langsung jadi. Data tersimpan aman di HP kamu sendiri.</p>
+      <form id="form-daftar">
+        <label for="input-nama">Nama</label>
+        <input id="input-nama" type="text" required placeholder="Nama kamu" maxlength="40">
+        <label for="input-telepon">No. HP (opsional)</label>
+        <input id="input-telepon" type="tel" placeholder="08xxxxxxxxxx" maxlength="16">
+        <p class="catatan">No. HP hanya tersimpan di HP kamu — dipakai untuk pemulihan kartu di masa mendatang.</p>
+        <button class="btn btn-utama btn-blok" type="submit">Buat Kartu Member Saya</button>
+      </form>
+    </section>
+
+    <!-- Kartu member (tampil jika sudah terdaftar) -->
+    <section id="bagian-kartu" hidden>
+      <div class="kartu-member">
+        <div class="kedai" data-nama-kedai>Kedai Ampyang</div>
+        <h2 id="kartu-nama"></h2>
+        <div class="meta">
+          <span id="kartu-id"></span>
+          <span id="kartu-sejak"></span>
+        </div>
+        <div id="grid-stempel" class="grid-stempel"></div>
+        <p id="teks-progres" class="teks-progres"></p>
+      </div>
+
+      <div id="banner-hadiah" class="banner-hadiah" hidden>
+        <strong>Hadiah menantimu</strong>
+        <p id="teks-hadiah"></p>
+      </div>
+
+      <button id="btn-stempel" class="btn btn-utama btn-blok">Tambah Stempel (oleh kasir)</button>
+      <button id="btn-hadiah" class="btn btn-sekunder btn-blok" hidden>Tukar Hadiah (oleh kasir)</button>
+
+      <section class="panel" style="margin-top:1.25rem">
+        <h2>Riwayat</h2>
+        <ul id="daftar-riwayat" class="daftar-riwayat"></ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong data-nama-kedai>Kedai Ampyang</strong> · © <span data-tahun></span></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/kartu.js"></script>
+</body>
+</html>
